@@ -1,32 +1,43 @@
 import React from 'react';
-import {CodInput, Container, Logotip, SendCodButton, TopTextInput} from "./registrationStyleWrapper";
+import {
+    CodeInput,
+    Container,
+    Logo,
+    SendCodeButton,
+    TopTextInput
+} from "./RegistrationStyleWrapper";
 import styled from 'styled-components'
-import {Avatar, Badge, Button} from "antd";
+import {Avatar, Button} from "antd";
 import {PlusOutlined, UserOutlined} from "@ant-design/icons";
+import {NavLink} from "react-router-dom";
+import UserIcon from './UserIcon.svg'
 
-const WelcomeLogotip = styled(Logotip)`
-  margin-top: 38px;
+const WelcomeLogo = styled(Logo)`
+  margin: 38px 0px;
   width: 50.8%;
-  margin-bottom: 40px;
   text-align: center;
 `
 
 const MyAvatar = styled(Avatar)`
   margin-bottom: 18px;
-  background-color: #8E86A5;
+  background-color: #4B455C;
 `
 
-const MyUserOutlined =styled(UserOutlined)`
+const MyUserOutlined = styled(UserOutlined)`
   color: #F2F2F2;
 `
-const Skip = styled.div`
+const Skip = styled(NavLink)`
   margin-top: 17px;
   color: #4F415A;
-  font-weight: bold;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
 `
-const SendFormButton = styled(SendCodButton)`
-  margin-top: 87px;
+
+const SendFormButton = styled(SendCodeButton)`
+  margin-top: 77px;
   margin-bottom: 0px;
+  color: #FFFFFF;
 `
 
 const AvatarWrapper = styled.div`
@@ -45,17 +56,19 @@ const PositionButton = styled.div`
   height: 100%;
 `
 
+const MyButton = styled(Button)`
+  background-color: #076ED1;
+`
 const InputData = () => {
     return (
         <Container>
-            <WelcomeLogotip>
+            <WelcomeLogo>
                 Добро пожаловать в FENESTRAM!
-            </WelcomeLogotip>
-
+            </WelcomeLogo>
             <AvatarWrapper>
                 <MyAvatar size={94} icon={<MyUserOutlined />} />
                 <PositionButton>
-                    <Button
+                    <MyButton
                         type="primary"
                         shape="circle"
                         size="small"
@@ -67,27 +80,28 @@ const InputData = () => {
             <TopTextInput>
                 Имя
             </TopTextInput>
-            <CodInput/>
+            <CodeInput marginBottom="25px"/>
 
             <TopTextInput>
                 Никнейм
             </TopTextInput>
-            <CodInput/>
+            <CodeInput marginBottom="25px"/>
+
 
             <TopTextInput>
                 Дата рождения
             </TopTextInput>
-            <CodInput/>
+            <CodeInput marginBottom="25px"/>
 
             <TopTextInput>
                 Email
             </TopTextInput>
-            <CodInput/>
+            <CodeInput/>
 
             <SendFormButton>
                 Готово
             </SendFormButton>
-            <Skip>Пропустить</Skip>
+            <Skip to="">Пропустить</Skip>
         </Container>
     );
 };

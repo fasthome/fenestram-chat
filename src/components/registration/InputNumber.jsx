@@ -1,23 +1,29 @@
 import React from 'react';
-import {CodInput, Container, Logotip, SendCodButton, TopTextInput} from "./registrationStyleWrapper";
+import {
+    CodeInput,
+    Container,
+    Logo,
+    SendCodeButton,
+    TopTextInput
+} from "./RegistrationStyleWrapper";
 import styled from "styled-components";
 
-const SendNumberButton = styled(SendCodButton)`
+const SendNumberButton = styled(SendCodeButton)`
   margin-top: 43px;
   background-color: #076ED1;
 `
-const Inputnumber = () => {
+const InputNumber = () => {
     return (
         <Container>
-            <Logotip>
+            <Logo>
                 FENESTRAM
-            </Logotip>
+            </Logo>
 
             <TopTextInput>
                 Номер телефона
             </TopTextInput>
 
-            <CodInput />
+            <CodeInput />
 
             <SendNumberButton>
                     Отправить код
@@ -26,4 +32,4 @@ const Inputnumber = () => {
     );
 };
 
-export default Inputnumber;
+export default InputNumber;

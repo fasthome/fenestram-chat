@@ -1,30 +1,30 @@
-import styled from 'styled-components'
-import Inputnumber from "./components/registration/Inputnumber";
-import Falsecod from "./components/registration/Falsecod";
-import Inputcod from "./components/registration/Inputcod";
-import ReturnInputCod from "./components/registration/returnInputCod";
-import InputData from "./components/registration/inputData";
-import 'antd/dist/antd.min.css'
-
+import React from 'react';
+import styled from 'styled-components';
+import InputNumber from "./components/registration/InputNumber";
+import ErrorCodeInput from "./components/registration/ErrorCodeInput";
+import InputCod from "./components/registration/InputCod";
+import ReturnInputCod from "./components/registration/ReturnInputCod";
+import InputData from "./components/registration/InputData";
+import 'antd/dist/antd.min.css';
+import {BrowserRouter} from "react-router-dom";
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
-  font-family: Geometria;
+  font-family: 'Poppins', sans-serif;
 `
-
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
           <Wrapper>
-              <Inputnumber />
-              <Falsecod />
-              <Inputcod />
-              <ReturnInputCod />
-              <InputData />
+              <InputNumber />
+              {/*<InputCod />*/}
+              {/*<ErrorCodeInput />*/}
+              {/*<ReturnInputCod />*/}
+              {/*<InputData />*/}
           </Wrapper>
-    </div>
+    </BrowserRouter>
   );
 }
 
