@@ -10,7 +10,6 @@ import styled from 'styled-components'
 import {Avatar, Button} from "antd";
 import {PlusOutlined, UserOutlined} from "@ant-design/icons";
 import {NavLink} from "react-router-dom";
-import UserIcon from './UserIcon.svg'
 
 const WelcomeLogo = styled(Logo)`
   margin: 38px 0px;
